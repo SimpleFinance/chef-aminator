@@ -5,11 +5,13 @@ package 'git'
 user node[:aminator][:user]
 
 directory '/var/log/aminator' do
+  recursive true
   owner node[:aminator][:user]
   group node[:aminator][:user]
 end
 
 directory '/var/aminator/lock' do
+  recursive true
   owner node[:aminator][:user]
   group node[:aminator][:user]
 end
